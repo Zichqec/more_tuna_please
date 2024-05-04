@@ -1,0 +1,4 @@
+charset,UTF-8
+type,shell
+name,More Tuna Please
+directory,more_tuna_please_zi

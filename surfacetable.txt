@@ -1,0 +1,182 @@
+charset,UTF-8
+version,1
+option,DisableNoDefineSurfaces
+
+group,__disabled
+{
+	10,
+	2000,__parts
+	2001,__parts
+	2002,__parts
+	4000,__parts
+	4001,__parts
+	5000,__parts
+}
+
+group,Down
+{
+	scope,0
+	
+	0,N - Normal
+	1,N - Embarrased
+	2,N - Surprised
+	3,N - Anxious
+	4,N - Discouraged
+	5,N - Smile
+	6,N - Relaxed
+	7,N - Angry
+	8,N - Cold smile
+	9,N - Embarrased anger
+	
+	20,F - Normal
+	21,F - Embarrased
+	22,F - Surprised
+	23,F - Anxious
+	24,F - Discouraged
+	25,F - Smile
+	26,F - Relieved
+	27,F - Angry
+	28,F - Cold smile
+	29,F - Embarrased anger
+	
+	30,L - Normal
+	31,L - Embarrased
+	32,L - Surprised
+	33,L - Anxious
+	34,L - Discouraged
+	35,L - Smile
+	36,L - Relieved
+	37,L - Angry
+	38,L - Cold smile
+	39,L - Embarrased anger
+	
+	40,R - Normal
+	41,R - Embarrased
+	42,R - Surprised
+	43,R - Anxious
+	44,R - Discouraged
+	45,R - Smile
+	46,R - Relieved
+	47,R - Angry
+	48,R - Cold smile
+	49,R - Embarrased anger
+	
+	50,S - >:3
+	51,S - Sheepish
+	52,S - Confident
+	53,S - Determined
+	
+	56,S - Relieved
+}
+
+group,Think
+{
+	scope,0
+	
+	100,N - Normal
+	101,N - Embarrased
+	102,N - Surprised
+	103,N - Anxious
+	104,N - Discouraged
+	105,N - Smile
+	106,N - Relaxed
+	107,N - Angry
+	108,N - Cold smile
+	109,N - Embarrased anger
+	
+	120,F - Normal
+	121,F - Embarrased
+	122,F - Surprised
+	123,F - Anxious
+	124,F - Discouraged
+	125,F - Smile
+	126,F - Relieved
+	127,F - Angry
+	128,F - Cold smile
+	129,F - Embarrased anger
+	
+	130,L - Normal
+	131,L - Embarrased
+	132,L - Surprised
+	133,L - Anxious
+	134,L - Discouraged
+	135,L - Smile
+	136,L - Relieved
+	137,L - Angry
+	138,L - Cold smile
+	139,L - Embarrased anger
+	
+	140,R - Normal
+	141,R - Embarrased
+	142,R - Surprised
+	143,R - Anxious
+	144,R - Discouraged
+	145,R - Smile
+	146,R - Relieved
+	147,R - Angry
+	148,R - Cold smile
+	149,R - Embarrased anger
+	
+	150,S - >:3c
+	151,S - Sheepish
+	152,S - Confident
+	153,S - Determined
+	
+	156,S - Relieved
+}
+
+group,Gesture
+{
+	scope,0
+	
+	200,N - Normal
+	201,N - Embarrased
+	202,N - Surprised
+	203,N - Anxious
+	204,N - Discouraged
+	205,N - Smile
+	206,N - Relaxed
+	207,N - Angry
+	208,N - Cold smile
+	209,N - Embarrased anger
+	
+	220,F - Normal
+	221,F - Embarrased
+	222,F - Surprised
+	223,F - Anxious
+	224,F - Discouraged
+	225,F - Smile
+	226,F - Relieved
+	227,F - Angry
+	228,F - Cold smile
+	229,F - Embarrased anger
+	
+	230,L - Normal
+	231,L - Embarrased
+	232,L - Surprised
+	233,L - Anxious
+	234,L - Discouraged
+	235,L - Smile
+	236,L - Relieved
+	237,L - Angry
+	238,L - Cold smile
+	239,L - Embarrased anger
+	
+	240,R - Normal
+	241,R - Embarrased
+	242,R - Surprised
+	243,R - Anxious
+	244,R - Discouraged
+	245,R - Smile
+	246,R - Relieved
+	247,R - Angry
+	248,R - Cold smile
+	249,R - Embarrased anger
+	
+	250,S - >:3
+	251,S - Sheepish
+	252,S - Confident
+	253,S - Determined
+	
+	256,S - Relieved
+}

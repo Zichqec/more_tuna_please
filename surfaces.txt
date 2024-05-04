@@ -1,0 +1,377 @@
+descript
+{
+	version,1
+	
+	//satolist.palette.offset,168,7
+	//satolist.palette.frame,125,125
+}
+
+//—————————————————————————————— Sakura surfaces ——————————————————————————————
+
+//Different arm layouts
+surface0-9,!10,56,20-53
+{
+	element0,overlay,base.png,0,0
+	element1,overlay,arms/down.png,0,0
+	
+	collisionex6,Right_hand,region,collisions/alt.png,176,142,120
+	collisionex7,Belly,region,collisions/alt.png,038,202,197
+}
+
+surface100-109,156,120-153
+{
+	element0,overlay,base.png,0,0
+	
+	//Arm needs to overlay on top of everything
+	animation5000.interval,runonce
+	animation5000.pattern0,overlay,5000,0,0,0
+	
+	collisionex6,Right_hand,region,collisions/alt.png,082,118,240
+	collisionex7,Belly,region,collisions/main.png,038,202,197
+	
+	//satolist.surface.default,5000,0
+}
+
+surface200-209,256,220-253
+{
+	element0,overlay,base.png,0,0
+	element1,overlay,arms/out.png,0,0
+	
+	collisionex6,Right_hand,region,collisions/main.png,226,237,142
+	collisionex7,Belly,region,collisions/main.png,038,202,197
+}
+
+//Different eyes
+surface0,1,2,3,5,8,100,101,102,103,105,108,200,201,202,203,205,208
+{
+	element2,overlay,eyes/up.png,0,0
+}
+
+surface4,6,7,9,104,106,107,109,204,206,207,209
+{
+	element2,overlay,eyes/down.png,0,0
+}
+
+surface20-29,120-129,220-229
+{
+	element2,overlay,eyes/forward.png,0,0
+}
+
+surface30-39,130-139,230-239
+{
+	element2,overlay,eyes/left.png,0,0
+}
+
+surface40-49,140-149,240-249
+{
+	element2,overlay,eyes/right.png,0,0
+}
+
+
+//Everything else that makes up each pose! This is the ears, eyebrows, and mouths. Sorry that the numbers are messy - if you want to add anything new, just mind that for each surface number the hundreds column is the arms (0-2), and the tens column is the eyes (0-4, skipping 1 due to surface10)
+//Normal
+surface0,20,30,40,100,120,130,140,200,220,230,240
+{
+	element3,overlay,ears/up.png,0,0
+	element4,overlay,eyebrows/normal.png,0,0
+	element5,overlay,mouths/smile.png,0,0
+	
+	//Up ears use main.png, down ears use alt.png
+	collisionex8,Ears,region,collisions/main.png,196,090,185
+}
+
+//Embarrased
+surface1,21,31,41,101,121,131,141,201,221,231,241
+{
+	element3,overlay,ears/down.png,0,0
+	element4,overlay,eyebrows/sad.png,0,0
+	element5,overlay,mouths/smile.png,0,0
+	
+	//Blush needs to overlay above blink
+	animation4000.interval,runonce
+	animation4000.pattern0,overlay,4000,0,0,0
+	
+	collisionex8,Ears,region,collisions/alt.png,196,090,185
+	
+	//satolist.surface.default,4000,0
+}
+
+//Surprised
+surface2,22,32,42,102,122,132,142,202,222,232,242
+{
+	element3,overlay,ears/up.png,0,0
+	element4,overlay,eyebrows/raised.png,0,0
+	element5,overlay,mouths/small.png,0,0
+	
+	collisionex8,Ears,region,collisions/main.png,196,090,185
+}
+
+//Anxious
+surface3,23,33,43,103,123,133,143,203,223,233,243
+{
+	element3,overlay,ears/down.png,0,0
+	element4,overlay,eyebrows/sad.png,0,0
+	element5,overlay,mouths/frown.png,0,0
+	
+	collisionex8,Ears,region,collisions/alt.png,196,090,185
+}
+
+//Discouraged
+surface4,24,34,44,104,124,134,144,204,224,234,244
+{
+	element3,overlay,ears/down.png,0,0
+	element4,overlay,eyebrows/sad.png,0,0
+	element5,overlay,mouths/small.png,0,0
+	
+	collisionex8,Ears,region,collisions/alt.png,196,090,185
+}
+
+//Smile
+surface5,25,35,45,105,125,135,145,205,225,235,245
+{
+	element3,overlay,ears/up.png,0,0
+	element4,overlay,eyebrows/raised.png,0,0
+	element5,overlay,mouths/smile.png,0,0
+	
+	collisionex8,Ears,region,collisions/main.png,196,090,185
+}
+
+//Closed eyes / relaxed
+//I was having trouble with this surface and the other iterations of it having overlaps with other expressions... so what I've done is, surface6 and its arm variants follow the recommended expressions, but then the versions with eyes have an expression that doesn't exactly match any other. it's a bit weird but it does mean more options this way without any gaps. So 26, 36, 46, and their arm variants all have different eyebrows. If you want those same eyebrows with the eyes closed, I added 56 + arm variants for this purpose.
+surface6,106,206
+{
+	element3,overlay,ears/up.png,0,0
+	element4,overlay,eyebrows/normal.png,0,0
+	element5,overlay,mouths/smile.png,0,0
+	
+	collisionex8,Ears,region,collisions/main.png,196,090,185
+}
+
+surface26,36,46,126,136,146,226,236,246
+{
+	element3,overlay,ears/up.png,0,0
+	element4,overlay,eyebrows/sad.png,0,0
+	element5,overlay,mouths/smile.png,0,0
+	
+	collisionex8,Ears,region,collisions/main.png,196,090,185
+}
+
+//Angry
+surface7,27,37,47,107,127,137,147,207,227,237,247
+{
+	element3,overlay,ears/down.png,0,0
+	element4,overlay,eyebrows/furrowed.png,0,0
+	element5,overlay,mouths/small.png,0,0
+	
+	collisionex8,Ears,region,collisions/alt.png,196,090,185
+}
+
+//Cold smile
+surface8,28,38,48,108,128,138,148,208,228,238,248
+{
+	element3,overlay,ears/down.png,0,0
+	element4,overlay,eyebrows/sad.png,0,0
+	element5,overlay,mouths/smile.png,0,0
+	
+	//Sweat needs to overlay above blush (when blush is called manually)
+	animation4001.interval,runonce
+	animation4001.pattern0,overlay,4001,0,0,0
+	
+	collisionex8,Ears,region,collisions/alt.png,196,090,185
+}
+
+//Embarrased anger
+surface9,29,39,49,109,129,139,149,209,229,239,249
+{
+	element3,overlay,ears/down.png,0,0
+	element4,overlay,eyebrows/furrowed.png,0,0
+	element5,overlay,mouths/frown.png,0,0
+	
+	//Blush needs to overlay above blink
+	animation4000.interval,runonce
+	animation4000.pattern0,overlay,4000,0,0,0
+	
+	collisionex8,Ears,region,collisions/alt.png,196,090,185
+	
+	//satolist.surface.default,4000,0
+}
+
+//Special expressions that don't follow the above pattern (but there is still one for each arm). If you make any new expression combinations I'd recommend making them like this!
+//If you add new ones, you'll have to adjust the surface definitions at the top that add the arms and base
+//You may also have to adjust the append below that adds blinks
+
+//Mischief >:3
+surface50,150,250
+{
+	element2,overlay,eyes/right.png,0,0
+	element3,overlay,ears/up.png,0,0
+	element4,overlay,eyebrows/furrowed.png,0,0
+	element5,overlay,mouths/smile.png,0,0
+	
+	collisionex8,Ears,region,collisions/main.png,196,090,185
+}
+
+//Sheepish
+surface51,151,251
+{
+	element2,overlay,eyes/left.png,0,0
+	element3,overlay,ears/up.png,0,0
+	element4,overlay,eyebrows/sad.png,0,0
+	element5,overlay,mouths/wide.png,0,0
+	
+	collisionex8,Ears,region,collisions/main.png,196,090,185
+}
+
+//Confident
+surface52,152,252
+{
+	element2,overlay,eyes/up.png,0,0
+	element3,overlay,ears/up.png,0,0
+	element4,overlay,eyebrows/furrowed.png,0,0
+	element5,overlay,mouths/smile.png,0,0
+	
+	collisionex8,Ears,region,collisions/main.png,196,090,185
+}
+
+//Determined
+surface53,153,253
+{
+	element2,overlay,eyes/forward.png,0,0
+	element3,overlay,ears/up.png,0,0
+	element4,overlay,eyebrows/furrowed.png,0,0
+	element5,overlay,mouths/smile.png,0,0
+	
+	collisionex8,Ears,region,collisions/main.png,196,090,185
+}
+
+//Relieved (to go with the 26, 36, 46 expressions, which is why it's out of sequence here... you can put more expressions before and after this one!)
+surface56,156,256
+{
+	element2,overlay,eyes/down.png,0,0
+	element3,overlay,ears/up.png,0,0
+	element4,overlay,eyebrows/sad.png,0,0
+	element5,overlay,mouths/smile.png,0,0
+	
+	collisionex8,Ears,region,collisions/main.png,196,090,185
+}
+
+
+//Animations and collisions that apply to all
+surface.append0-999,!10
+{
+	//Talk
+	animation1.interval,talk,6
+	animation1.pattern0,alternativestart,(2,3,4,5)
+	animation1.option,shared-index
+	
+	animation2.interval,never
+	animation2.pattern0,overlay,2000,0,0,0
+	animation2.pattern1,overlay,-1,100,0,0
+	animation2.option,shared-index
+	
+	animation3.interval,never
+	animation3.pattern0,overlay,2001,0,0,0
+	animation3.pattern2,overlay,-1,100,0,0
+	animation3.option,shared-index
+	
+	animation4.interval,never
+	animation4.pattern0,overlay,2000,0,0,0
+	animation4.pattern1,overlay,2002,75,0,0
+	animation4.pattern2,overlay,2001,100,0,0
+	animation4.pattern3,overlay,-1,75,0,0
+	animation4.option,shared-index
+	
+	animation5.interval,never
+	animation5.pattern0,overlay,2001,0,0,0
+	animation5.pattern1,overlay,2002,75,0,0
+	animation5.pattern2,overlay,2000,100,0,0
+	animation5.pattern3,overlay,-1,75,0,0
+	animation5.option,shared-index
+	
+	//Stop talking
+	animation10.interval,never
+	animation10.pattern0,stop,1
+	
+	//Blush
+	animation11.interval,never
+	animation11.pattern0,overlay,4000,0,0,0
+	
+	//Sweat drop
+	animation12.interval,never
+	animation12.pattern0,start,12000
+	
+	//Started by the above, to make this go up overtop of the blushing... layering weird. Blush has to be on top of blink, sweat has to be on top of blush, but I want small numbers to make them easy to call. Blushes were a mistake.
+	//I mean this makes it so you can get the same expression in multiple ways, but... whatever man
+	animation12000.interval,never
+	animation12000.pattern0,overlay,4001,0,0,0
+	
+	//Tail
+	animation3000.interval,always
+	animation3000.pattern0,overlay,3000,0,0,0
+	animation3000.pattern1,overlay,3001,150-1500,0,0
+	animation3000.pattern2,overlay,3002,100,0,0
+	animation3000.pattern3,overlay,3003,100,0,0
+	animation3000.pattern4,overlay,3002,200-2000,0,0
+	animation3000.pattern5,overlay,3001,100,0,0
+	animation3000.pattern6,overlay,3001,100,0,0
+	animation3000.option,shared-index
+	
+	collisionex0,Head,region,collisions/head.png,072,083,232
+	collisionex1,Left_hand,region,collisions/main.png,051,056,097
+	collisionex2,Necklace,region,collisions/main.png,164,203,247
+	collisionex3,Face,region,collisions/main.png,245,137,016
+	collisionex4,Nose,region,collisions/main.png,148,040,156
+	collisionex5,Hair,region,collisions/main.png,239,174,208
+}
+
+//Blinks, applying only to surfaces with open eyes
+surface.append20-299,!100-109,!200-209,!52,!152,!252,!56,!156,!256
+{
+	animation0.interval,random,4
+	animation0.pattern0,overlay,1000,0,0,0
+	animation0.pattern1,overlay,1001,100,0,0
+	animation0.pattern2,overlay,-1,50,0,0
+	animation0.option,shared-index
+}
+
+//—————————————————————————————— Kero surfaces ——————————————————————————————
+surface10
+{
+}
+
+//—————————————————————————————— Pieces for animations ——————————————————————————————
+surface2000
+{
+	element0,overlay,mouths/wide.png,0,0
+}
+
+surface2001
+{
+	element0,overlay,mouths/round.png,0,0
+}
+
+surface2002
+{
+	element0,overlay,mouths/small.png,0,0
+}
+
+surface4000
+{
+	element0,overlay,extras/blush.png,0,0
+}
+
+surface4001
+{
+	element0,overlay,extras/sweat.png,0,0
+}
+
+surface5000
+{
+	element0,overlay,arms/think.png,0,0
+}
+
+
+surface.append10,2000-2002,4000-4001,5000,9000,
+{
+	//satolist.palette.visible,0
+}
